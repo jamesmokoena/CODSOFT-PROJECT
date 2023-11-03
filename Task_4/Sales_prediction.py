@@ -7,11 +7,14 @@ from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 # Load your sales data from a CSV file 
-data = pd.read_csv('car_purchasing.csv')
+# Load the car purchasing data from 'car_purchasing.csv' with the 'cp1252' encoding
+data = pd.read_csv('car_purchasing.csv', encoding='cp1252')
+
 
 # Data preprocessing: Extract features and target variable
-X = data[['AdvertisingExpenditure', 'TargetAudienceSegmentation']]
-y = data['Sales']
+print(data.columns)
+X = data[['gender', 'age', 'annual Salary', 'credit card debt', 'net worth']]
+y = data['car purchase amount']
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
