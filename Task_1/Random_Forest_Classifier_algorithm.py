@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 def load_titanic_train_data():
     # Load the titanic_trainset
-    titanic_train = pd.read_csv('Task 1-TITANIC SURVIVAL PREDICTION/DATASET/train.csv')
+    titanic_train = pd.read_csv('train.csv')
 
     # Display basic information about the titanic_trainset
     print(titanic_train.info())
